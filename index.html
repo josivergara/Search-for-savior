@@ -194,8 +194,67 @@ background:radial-gradient(circle at 50% 50%,rgba(145,220,0,.18),transparent 48%
 @media(max-width:800px){.video-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.video-grid{grid-template-columns:1fr}}
 
+
+/* Welcome / liquid entry screen */
+body.welcome-active{overflow:hidden}
+.welcome-screen{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;
+background:radial-gradient(ellipse at 50% 58%,rgba(70,112,0,.19),transparent 38%),#030503;
+opacity:1;visibility:visible;transition:opacity .85s ease,visibility .85s ease}
+.welcome-screen.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+.welcome-screen:before,.welcome-screen:after{content:"";position:absolute;inset:-30%;pointer-events:none}
+.welcome-screen:before{background:
+radial-gradient(ellipse 24% 13% at 22% 68%,rgba(124,190,0,.22),transparent 72%),
+radial-gradient(ellipse 28% 16% at 78% 38%,rgba(105,165,0,.2),transparent 72%),
+radial-gradient(ellipse 20% 14% at 52% 82%,rgba(160,220,30,.12),transparent 74%);
+filter:blur(34px);animation:welcome-drift 8s ease-in-out infinite alternate}
+.welcome-screen:after{inset:auto -10% -18%;height:48%;background:
+radial-gradient(ellipse 30% 48% at 20% 100%,rgba(128,183,35,.19),transparent 72%),
+radial-gradient(ellipse 35% 52% at 75% 100%,rgba(150,205,55,.17),transparent 74%);
+filter:blur(28px);animation:welcome-fog 6s ease-in-out infinite alternate}
+.welcome-content{position:relative;z-index:2;width:min(90%,620px);display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px}
+.welcome-logo{width:min(82vw,460px);height:auto;filter:drop-shadow(0 0 18px rgba(165,255,0,.24));animation:welcome-logo 3.4s ease-in-out infinite}
+.welcome-thanks{margin:20px 0 7px;color:#eff5df;font-size:clamp(1rem,3vw,1.35rem);font-weight:900;letter-spacing:.18em;text-transform:uppercase;text-shadow:0 0 22px rgba(165,255,0,.32)}
+.welcome-subtitle{margin:0;color:#a5aa98;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.welcome-loader{position:relative;width:min(240px,65vw);height:5px;margin:30px 0 20px;border-radius:99px;background:rgba(165,255,0,.12);overflow:hidden;box-shadow:0 0 18px rgba(165,255,0,.08)}
+.welcome-loader span{position:absolute;inset:0 auto 0 0;width:38%;border-radius:99px;background:linear-gradient(90deg,#6eaa00,#d4ff77,#91d900);box-shadow:0 0 16px rgba(165,255,0,.8);animation:loader-flow 1.5s ease-in-out infinite}
+.welcome-enter{position:relative;z-index:3;border:1px solid rgba(165,255,0,.55);background:rgba(10,17,5,.72);color:#dfffad;padding:11px 19px;font-size:.62rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .25s ease,box-shadow .25s ease,transform .25s ease}
+.welcome-enter:hover{background:rgba(95,145,0,.22);box-shadow:0 0 24px rgba(165,255,0,.2);transform:translateY(-2px)}
+.welcome-blob{position:absolute;z-index:1;width:clamp(170px,34vw,360px);aspect-ratio:1;border-radius:43% 57% 61% 39% / 46% 39% 61% 54%;
+background:radial-gradient(ellipse at 32% 24%,rgba(230,255,180,.78),transparent 8%),radial-gradient(ellipse at 35% 28%,#a5ed31 0%,#5d9200 32%,#263e05 67%,rgba(13,23,2,.15) 74%);
+filter:drop-shadow(0 0 32px rgba(130,210,0,.22));opacity:.19;animation:blob-morph 7s ease-in-out infinite alternate}
+.welcome-blob.one{left:-10%;bottom:-13%}
+.welcome-blob.two{right:-12%;top:-18%;width:clamp(130px,25vw,260px);animation-delay:-3s;opacity:.14}
+@keyframes welcome-drift{from{transform:translate3d(-2%,1%,0) scale(.96)}to{transform:translate3d(2%,-2%,0) scale(1.06)}}
+@keyframes welcome-fog{from{transform:translateX(-3%) scaleY(.92)}to{transform:translateX(3%) scaleY(1.08)}}
+@keyframes welcome-logo{0%,100%{filter:drop-shadow(0 0 15px rgba(165,255,0,.18));transform:scale(.99)}50%{filter:drop-shadow(0 0 30px rgba(165,255,0,.42));transform:scale(1.015)}}
+@keyframes loader-flow{0%{transform:translateX(-115%)}100%{transform:translateX(275%)}}
+@keyframes blob-morph{0%{border-radius:43% 57% 61% 39% / 46% 39% 61% 54%;transform:rotate(-8deg) scale(.92)}100%{border-radius:58% 42% 39% 61% / 38% 57% 43% 62%;transform:rotate(12deg) scale(1.08)}}
+
+/* Soft toxic backlight behind section headings */
+.section-head h2,.booking h2{position:relative;isolation:isolate;width:fit-content;max-width:100%;text-shadow:0 0 18px rgba(165,255,0,.13)}
+.section-head h2:before,.booking h2:before{content:"";position:absolute;z-index:-1;left:-9%;right:-14%;top:8%;bottom:-12%;
+background:radial-gradient(ellipse at 48% 55%,rgba(139,220,0,.27),rgba(94,151,0,.12) 42%,transparent 74%);
+filter:blur(17px);opacity:.8;transform:scaleY(1.15);animation:title-aura 5.5s ease-in-out infinite alternate;pointer-events:none}
+@keyframes title-aura{from{opacity:.55;filter:blur(15px);transform:scale(.96,1.05)}to{opacity:1;filter:blur(23px);transform:scale(1.08,1.2)}}
+@media(prefers-reduced-motion:reduce){
+ .welcome-screen,.welcome-screen *{animation:none!important;transition:none!important}
+ .section-head h2:before,.booking h2:before{animation:none!important}
+}
+
 </style></head>
-<body>
+<body class="welcome-active">
+
+<div class="welcome-screen" id="welcome-screen" role="dialog" aria-modal="true" aria-label="Welcome to Search For Savior">
+  <div class="welcome-blob one" aria-hidden="true"></div><div class="welcome-blob two" aria-hidden="true"></div>
+  <div class="welcome-content">
+    <img class="welcome-logo" src="search-for-savior-logo.webp" alt="Search For Savior">
+    <p class="welcome-thanks">Thank you for checking us out</p>
+    <p class="welcome-subtitle">Welcome to the official Search For Savior experience</p>
+    <div class="welcome-loader" aria-hidden="true"><span></span></div>
+    <button class="welcome-enter" id="welcome-enter" type="button">Enter the noise</button>
+  </div>
+</div>
+
 <div class="slime-atmosphere" aria-hidden="true"></div>
 <div class="slime-fog" aria-hidden="true"></div>
 <div class="slime-bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
@@ -316,4 +375,22 @@ background:radial-gradient(circle at 50% 50%,rgba(145,220,0,.18),transparent 48%
 </div></section>
 
 <footer class="wrap"><span>© <span id="year"></span> SEARCH FOR SAVIOR</span><span>INDEPENDENT · HOUSTON, TX</span></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  const screen=document.getElementById('welcome-screen');
+  const enter=document.getElementById('welcome-enter');
+  if(!screen||!enter)return;
+  let dismissed=false;
+  function dismiss(){
+    if(dismissed)return;
+    dismissed=true;
+    screen.classList.add('is-leaving');
+    document.body.classList.remove('welcome-active');
+    window.setTimeout(()=>screen.remove(),950);
+  }
+  enter.addEventListener('click',dismiss);
+  window.setTimeout(dismiss,3200);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!dismissed)dismiss();});
+})();
+</script></body></html>

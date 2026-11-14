@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Search For Savior — official artist website. Music, merch, live dates and booking.">
+  <title>SEARCH FOR SAVIOR — Official</title>
+  <style>
+    :root{--bg:#090909;--panel:#111;--ink:#f1eee9;--muted:#aaa39b;--red:#b21f26;--line:#302b29}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);gap:20px}
+    .brand{font-weight:900;letter-spacing:.16em;font-size:.9rem}
+    nav{display:flex;gap:22px;flex-wrap:wrap;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
+    nav a:hover,.text-link:hover{color:#e34b50}
+    .hero{min-height:76vh;display:grid;align-content:center;padding:90px 0 80px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 45%,rgba(145,15,23,.22),transparent 48%),linear-gradient(115deg,transparent 45%,rgba(255,255,255,.025));pointer-events:none}
+    .eyebrow{color:#e34b50;text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;font-weight:800}
+    h1{font-size:clamp(3.4rem,11vw,8.8rem);line-height:.82;letter-spacing:-.075em;margin:22px 0 26px;font-weight:950;max-width:900px;text-shadow:4px 4px 0 #36090c}
+    .hero p{max-width:520px;color:var(--muted);font-size:1.05rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;padding:14px 20px;border:1px solid var(--red);background:var(--red);font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    .btn.alt{background:transparent;border-color:#5a5350}
+    .btn:hover{filter:brightness(1.2)}
+    section{padding:76px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+    h2{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.055em;line-height:1;margin:8px 0 0;text-transform:uppercase}
+    .section-note{color:var(--muted);font-size:.85rem;max-width:360px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .tile{background:var(--panel);border:1px solid var(--line);padding:26px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+    .tile .tag{color:#e34b50;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+    .tile h3{font-size:1.5rem;text-transform:uppercase;margin:18px 0 8px}
+    .tile p{color:var(--muted);margin:0 0 16px;font-size:.9rem}
+    .text-link{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:900;border-bottom:1px solid var(--red);padding-bottom:5px;align-self:flex-start}
+    .wide{grid-column:1/-1;min-height:150px}
+    .booking{background:linear-gradient(120deg,#16090a,#0d0d0d 65%);border:1px solid #482024;padding:clamp(24px,5vw,52px)}
+    .booking p{color:var(--muted);max-width:560px}
+    footer{padding:28px 0 42px;color:var(--muted);font-size:.72rem;letter-spacing:.08em;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .small{font-size:.72rem;color:var(--muted)}
+    @media(max-width:700px){.topbar{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{min-height:68vh;padding:72px 0}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.section-head{display:block}.section-note{margin-top:12px}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#top">SFS / SEARCH FOR SAVIOR</a>
+    <nav aria-label="Main navigation">
+      <a href="#music">Music</a><a href="#merch">Merch</a><a href="#shows">Shows</a><a href="#booking">Booking</a>
+    </nav>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div class="eyebrow">Independent artist · Houston, Texas</div>
+      <h1>SEARCH<br>FOR SAVIOR</h1>
+      <p>Heavy sound. Dark atmosphere. No clean edges. The official home for new music, merch, live dates and contact.</p>
+      <div class="actions">
+        <a class="btn" href="#music">Enter the noise</a>
+        <a class="btn alt" href="#shows">Live dates</a>
+      </div>
+    </div>
+
+    <section id="music">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">01 / Discography</div><h2>Music & releases</h2></div><p class="section-note">New releases, singles and the sounds behind Search For Savior. Replace these starter cards with your streaming links.</p></div>
+        <div class="grid">
+          <article class="tile"><div><div class="tag">Latest release</div><h3>Latest single</h3><p>Add the release title, artwork and streaming link here.</p></div><a class="text-link" href="https://open.spotify.com/" target="_blank" rel="noopener">Listen / stream ↗</a></article>
+          <article class="tile"><div><div class="tag">More music</div><h3>Full discography</h3><p>Find the full catalog and follow for future drops.</p></div><a class="text-link" href="https://music.apple.com/" target="_blank" rel="noopener">Explore music ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="merch">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">02 / Official goods</div><h2>Merch</h2></div><p class="section-note">Official Search For Savior apparel and limited-run pieces. Add your product photos and shop link when ready.</p></div>
+        <div class="grid">
+          <article class="tile"><div><div class="tag">Apparel</div><h3>Shirts & longsleeves</h3><p>Put your current designs and product details here.</p></div><a class="text-link" href="mailto:YOUR-STORE-EMAIL">Shop / inquire ↗</a></article>
+          <article class="tile"><div><div class="tag">Limited drops</div><h3>Hoodies & more</h3><p>Limited merch drops, restocks and exclusive pieces.</p></div><a class="text-link" href="#booking">Ask about merch ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shows">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">03 / On stage</div><h2>Upcoming shows</h2></div><p class="section-note">Catch Search For Savior live. Dates will appear here as shows are announced.</p></div>
+        <div class="tile wide"><div><div class="tag">Next announcement</div><h3>Show details coming soon</h3><p>Venue · City · Date · Tickets — replace this card when the next show is confirmed.</p></div><span class="small">Check back for announcements.</span></div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="wrap">
+        <div class="booking">
+          <div class="eyebrow">04 / Get in touch</div>
+          <h2>Booking & contact</h2>
+          <p>For show offers, collaborations, press and other professional inquiries, reach out through the official contact channel.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:YOUR-BOOKING-EMAIL">Email for booking</a>
+            <a class="btn alt" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+          <p class="small">Before publishing: replace YOUR-BOOKING-EMAIL and the Instagram link with your official contact details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> SEARCH FOR SAVIOR</span><span>INDEPENDENT · HOUSTON, TX</span></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

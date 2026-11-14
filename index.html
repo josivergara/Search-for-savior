@@ -150,6 +150,16 @@ background:linear-gradient(135deg,rgba(22,29,13,.97),rgba(7,9,7,.98));box-shadow
 .event-ticket-note{color:var(--muted);font-size:.77rem;line-height:1.5;margin:12px 0 0}
 @media(max-width:760px){.event-feature{grid-template-columns:1fr;padding:12px}.event-poster img{max-height:none;object-fit:contain}.event-info{padding:16px 8px 10px}}
 
+
+/* Downloadable electronic press kit */
+.epk-feature{display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;padding:clamp(22px,4vw,38px);
+border:1px solid #465a21;background:radial-gradient(ellipse at 90% 10%,rgba(132,205,0,.15),transparent 38%),linear-gradient(135deg,#12190b,#080a07 72%)}
+.epk-feature h3{font-size:clamp(1.7rem,4vw,2.7rem);line-height:.95;letter-spacing:-.05em;text-transform:uppercase;margin:10px 0}
+.epk-feature p{color:var(--muted);font-size:.9rem;max-width:560px;margin:0}
+.epk-meta{color:var(--acid);font-size:.65rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.epk-action{white-space:nowrap}
+@media(max-width:700px){.epk-feature{grid-template-columns:1fr}.epk-action{width:100%;text-align:center}}
+
 </style></head>
 <body>
 <div class="slime-atmosphere" aria-hidden="true"></div>
@@ -217,5 +227,18 @@ background:linear-gradient(135deg,rgba(22,29,13,.97),rgba(7,9,7,.98));box-shadow
 <p>For show offers, collaborations, press and other professional inquiries, reach out through the official contact channel.</p>
 <div class="actions"><a class="btn" href="mailto:sxdciety@gmail.com">Email for booking</a><a class="btn alt" href="https://www.instagram.com/SearchForSavior_official/" target="_blank" rel="noopener">Instagram ↗</a></div>
 <p class="small">Booking: sxdciety@gmail.com · Instagram: @SearchForSavior_official</p></div></div></section>
-</main><footer class="wrap"><span>© <span id="year"></span> SEARCH FOR SAVIOR</span><span>INDEPENDENT · HOUSTON, TX</span></footer>
+</main>
+<section id="press-kit"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">05 / Press & booking</div><h2>Electronic press kit</h2></div>
+  <p class="section-note">Everything promoters, venues, and media need to get familiar with Search For Savior.</p></div>
+  <div class="epk-feature">
+    <div><div class="epk-meta">Official artist press kit · PDF</div>
+      <h3>Search For Savior — EPK</h3>
+      <p>Artist biography, sound and genre profile, selected tracks, promotional photography, live appearance details, official links, and booking contact—all in one shareable document.</p>
+    </div>
+    <a class="btn epk-action" href="Search_For_Savior_Official_EPK.pdf" target="_blank" rel="noopener">View / download EPK ↗</a>
+  </div>
+</div></section>
+
+<footer class="wrap"><span>© <span id="year"></span> SEARCH FOR SAVIOR</span><span>INDEPENDENT · HOUSTON, TX</span></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>

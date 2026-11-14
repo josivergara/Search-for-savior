@@ -112,6 +112,27 @@ header,.hero,main section,footer{position:relative;z-index:1}
 @media(max-width:700px){.slime-atmosphere:before{filter:blur(22px)}.slime-fog{height:27vh;min-height:150px;opacity:.52}}
 @media(prefers-reduced-motion:reduce){.slime-atmosphere:before,.slime-bubbles span,.slime-fog,.slime-fog:before,.slime-fog:after{animation:none!important}.slime-bubbles{display:none}}
 
+
+/* Live shows & events hub */
+.shows-intro{display:flex;align-items:center;gap:12px;margin:0 0 22px;color:var(--muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.live-dot{width:9px;height:9px;border-radius:50%;background:var(--acid);box-shadow:0 0 14px rgba(165,255,0,.8);flex:0 0 auto}
+.show-layout{display:grid;grid-template-columns:1.35fr .65fr;gap:16px}
+.show-empty{position:relative;isolation:isolate;overflow:hidden;min-height:290px;padding:clamp(26px,5vw,48px);border:1px solid #40531d;
+background:radial-gradient(ellipse at 82% 18%,rgba(132,205,0,.17),transparent 38%),linear-gradient(140deg,#12190b,#080a07 72%);
+display:flex;flex-direction:column;justify-content:space-between}
+.show-empty:after{content:"SFS";position:absolute;right:-14px;bottom:-58px;z-index:-1;font-size:clamp(9rem,22vw,18rem);font-weight:1000;letter-spacing:-.12em;color:rgba(165,255,0,.035);line-height:1}
+.show-status{display:inline-flex;align-items:center;gap:9px;color:var(--acid);font-size:.66rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+.show-empty h3{font-size:clamp(2rem,5vw,3.8rem);line-height:.95;letter-spacing:-.06em;text-transform:uppercase;margin:22px 0 12px;max-width:620px}
+.show-empty p{color:var(--muted);max-width:470px;margin:0;font-size:.92rem}
+.show-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.show-side{border:1px solid var(--line);background:linear-gradient(155deg,#10150d,#080a07);padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.show-side .eyebrow{font-size:.62rem}
+.show-side h3{font-size:1.45rem;text-transform:uppercase;line-height:1.05;margin:14px 0 10px}
+.show-side p{color:var(--muted);font-size:.84rem;margin:0 0 20px}
+.show-side .text-link{margin-top:auto}
+.show-footnote{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:18px;padding-top:16px;color:var(--muted);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:760px){.show-layout{grid-template-columns:1fr}.show-empty{min-height:260px}.show-side{min-height:210px}}
+
 </style></head>
 <body>
 <div class="slime-atmosphere" aria-hidden="true"></div>
@@ -149,8 +170,29 @@ header,.hero,main section,footer{position:relative;z-index:1}
   <a class="btn" href="https://sfsmerch.printify.me/" target="_blank" rel="noopener">SHOP THE OFFICIAL COLLECTION ↗</a>
 </div>
 </div></section>
-<section id="shows"><div class="wrap"><div class="section-head"><div><div class="eyebrow">03 / On stage</div><h2>Upcoming shows</h2></div><p class="section-note">Catch Search For Savior live. Dates will appear here as shows are announced.</p></div>
-<div class="tile wide"><div><div class="tag">Next announcement</div><h3>Show details coming soon</h3><p>Venue · City · Date · Tickets — replace this card when the next show is confirmed.</p></div><span class="small">Check back for announcements.</span></div></div></section>
+<section id="shows"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">03 / On stage</div><h2>Live dates</h2></div><p class="section-note">The next chance to catch Search For Savior in the room. Confirmed dates and ticket information will be posted here.</p></div>
+<div class="shows-intro"><span class="live-dot"></span><span>Upcoming appearances · Official updates</span></div>
+<div class="show-layout">
+  <div class="show-empty">
+    <div><div class="show-status"><span class="live-dot"></span> No confirmed dates announced</div>
+      <h3>The next show is coming.</h3>
+      <p>We're getting the next appearances lined up. Check back here or follow the official page so you don't miss the announcement.</p>
+    </div>
+    <div class="show-actions">
+      <a class="btn" href="https://www.instagram.com/SearchForSavior_official/" target="_blank" rel="noopener">Follow show announcements ↗</a>
+      <a class="btn alt" href="mailto:sxdciety@gmail.com?subject=Search%20For%20Savior%20Show%20Inquiry">Ask about booking</a>
+    </div>
+  </div>
+  <aside class="show-side">
+    <div><div class="eyebrow">Promoters / venues</div><h3>Put Search For Savior on your lineup.</h3>
+      <p>For show offers, support slots, festival inquiries, and venue bookings, get in touch directly.</p>
+    </div>
+    <a class="text-link" href="mailto:sxdciety@gmail.com?subject=Search%20For%20Savior%20Booking">Booking inquiries ↗</a>
+  </aside>
+</div>
+<div class="show-footnote"><span>Houston, Texas · Independent</span><span>Dates posted when confirmed</span></div>
+</div></section>
 <section id="booking"><div class="wrap"><div class="booking"><div class="eyebrow">04 / Get in touch</div><h2>Booking & contact</h2>
 <p>For show offers, collaborations, press and other professional inquiries, reach out through the official contact channel.</p>
 <div class="actions"><a class="btn" href="mailto:sxdciety@gmail.com">Email for booking</a><a class="btn alt" href="https://www.instagram.com/SearchForSavior_official/" target="_blank" rel="noopener">Instagram ↗</a></div>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070907">
+<meta name="description" content="Gravewire Productions — mixing, mastering and artist feature services for independent artists.">
+<title>GRAVEWIRE PRODUCTIONS — Services</title>
+<style>
+:root{--bg:#050705;--panel:#0d110b;--ink:#f1f2e9;--muted:#a5aa98;--acid:#a5ff00;--line:#28351a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;position:relative;isolation:isolate;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{width:min(1040px,calc(100% - 40px));margin:auto}
+.slime-atmosphere{position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 12% 20%,rgba(68,105,0,.14),transparent 34%),radial-gradient(ellipse at 88% 55%,rgba(53,91,0,.13),transparent 38%),radial-gradient(ellipse at 48% 92%,rgba(73,116,0,.1),transparent 35%)}
+.slime-atmosphere:before{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse 28% 17% at 18% 32%,rgba(123,185,0,.16),transparent 72%),radial-gradient(ellipse 22% 13% at 72% 24%,rgba(92,153,0,.13),transparent 72%);filter:blur(28px);animation:drift 18s ease-in-out infinite alternate}
+.slime-fog{position:fixed;z-index:-1;pointer-events:none;left:-15%;right:-15%;bottom:-100px;height:270px;background:radial-gradient(ellipse at 20% 100%,rgba(117,165,35,.14),transparent 65%),radial-gradient(ellipse at 75% 100%,rgba(135,180,50,.12),transparent 65%);filter:blur(30px);animation:fog 12s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(3%,-2%) scale(1.08)}}@keyframes fog{to{transform:translateX(4%) scaleY(1.15)}}
+header{border-bottom:1px solid var(--line);background:rgba(4,6,4,.76);backdrop-filter:blur(12px)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:20px}
+.brand{font-weight:900;letter-spacing:.16em;font-size:.82rem;text-transform:uppercase}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+nav a:hover,.text-link:hover{color:var(--acid)}
+.hero{padding:clamp(70px,12vw,130px) 0 76px;text-align:center}
+.eyebrow{color:var(--acid);text-transform:uppercase;letter-spacing:.3em;font-size:.67rem;font-weight:800}
+h1{font-size:clamp(2.5rem,8vw,5.7rem);letter-spacing:-.065em;line-height:.96;text-transform:uppercase;margin:16px auto 18px;max-width:900px;text-shadow:0 0 24px rgba(165,255,0,.2)}
+.hero-copy{max-width:650px;margin:0 auto;color:var(--muted);font-size:1rem}
+.hero-glow{position:relative;isolation:isolate}.hero-glow:before{content:"";position:absolute;z-index:-1;inset:10% -12%;background:radial-gradient(ellipse,rgba(139,220,0,.23),transparent 68%);filter:blur(25px);animation:aura 5s ease-in-out infinite alternate}
+@keyframes aura{to{opacity:.55;transform:scale(1.1)}}
+section{padding:62px 0;border-top:1px solid var(--line)}
+.section-head{margin-bottom:25px}.section-head h2{font-size:clamp(1.9rem,5vw,3.3rem);letter-spacing:-.05em;line-height:1;margin:10px 0;text-transform:uppercase;text-shadow:0 0 20px rgba(165,255,0,.16)}
+.section-head h2:after{content:"";display:block;width:100%;height:1px;margin-top:14px;background:linear-gradient(90deg,rgba(165,255,0,.5),transparent)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border:1px solid #35451f;background:linear-gradient(145deg,rgba(16,21,13,.96),rgba(7,9,7,.96));padding:clamp(22px,4vw,34px);box-shadow:0 0 30px rgba(110,170,0,.045);display:flex;flex-direction:column;min-height:280px}
+.tag{color:var(--acid);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:900}
+.card h3{font-size:1.4rem;text-transform:uppercase;margin:12px 0 3px}
+.price{font-size:clamp(2.6rem,6vw,4rem);font-weight:900;letter-spacing:-.06em;color:var(--acid);line-height:1.1;text-shadow:0 0 24px rgba(165,255,0,.2)}
+.per{font-size:.75rem;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;margin:5px 0 18px}
+.card p{color:var(--muted);font-size:.9rem;margin:0 0 22px}
+.btn{display:inline-block;padding:14px 19px;border:1px solid var(--acid);background:var(--acid);color:#101407;font-size:.68rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;text-align:center;transition:box-shadow .25s,transform .25s}
+.btn:hover{box-shadow:0 0 24px rgba(165,255,0,.25);transform:translateY(-2px)}
+.card .btn{margin-top:auto;align-self:flex-start}
+.note{border:1px solid #3b4b23;background:linear-gradient(120deg,rgba(23,34,11,.82),rgba(8,11,8,.88));padding:clamp(22px,4vw,34px)}
+.note p{color:var(--muted);margin:8px 0 0}
+.names{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0;padding:0;list-style:none}
+.names li{border:1px solid #3a4924;background:rgba(165,255,0,.045);padding:9px 13px;color:#e8f2d8;font-size:.84rem}
+.steps{counter-reset:step;display:grid;gap:14px}
+.step{display:flex;gap:15px;align-items:flex-start;border-bottom:1px solid var(--line);padding:0 0 14px;color:var(--muted)}
+.step:before{counter-increment:step;content:"0" counter(step);color:var(--acid);font-weight:900;letter-spacing:.12em}
+.contact{text-align:center;padding:34px 20px;border:1px solid #42551c;background:radial-gradient(ellipse at 50% 0,rgba(105,160,0,.13),transparent 65%),#0a0e08}
+.contact p{color:var(--muted);max-width:600px;margin:10px auto 22px}
+.email{display:inline-block;color:var(--acid);font-weight:800;letter-spacing:.04em;margin-top:15px}
+footer{padding:28px 0 42px;color:var(--muted);font-size:.7rem;letter-spacing:.08em;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:680px){.topbar{align-items:flex-start;flex-direction:column}nav{gap:14px}.cards{grid-template-columns:1fr}.hero{padding-top:70px}.card{min-height:250px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="slime-atmosphere" aria-hidden="true"></div><div class="slime-fog" aria-hidden="true"></div>
+<header><div class="wrap topbar">
+<a class="brand" href="index.html">GRAVEWIRE PRODUCTIONS</a>
+<nav aria-label="Main navigation"><a href="index.html">Main site</a><a href="#services">Services</a><a href="#credits">Credits</a><a href="#inquiries">Inquiries</a></nav>
+</div></header>
+<main>
+<div class="wrap hero">
+<div class="eyebrow">Independent production · Houston, Texas</div>
+<div class="hero-glow"><h1>Mixing. Mastering. Features.</h1></div>
+<p class="hero-copy">Heavy music deserves a sound that hits hard. Mixing and mastering services and artist features for independent artists.</p>
+</div>
+
+<section id="services"><div class="wrap">
+<div class="section-head"><div class="eyebrow">01 / Production services</div><h2>Choose your service</h2></div>
+<div class="cards">
+<article class="card">
+<div class="tag">Audio production</div><h3>Mix &amp; Master</h3>
+<div class="price">$100</div><div class="per">Per song</div>
+<p>Mixing and mastering for your track, shaped for a powerful, polished final sound.</p>
+<a class="btn" href="mailto:sxdciety@gmail.com?subject=mix%20and%20master">Inquire — Mix &amp; Master</a>
+</article>
+<article class="card">
+<div class="tag">Artist collaboration</div><h3>Artist Feature</h3>
+<div class="price">$100</div><div class="per">Per song · Includes mix &amp; master</div>
+<p>Collaborate on a track with a Search For Savior feature. The service includes the song's mix and master.</p>
+<a class="btn" href="mailto:sxdciety@gmail.com?subject=feature">Inquire — Feature</a>
+</article>
+</div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+<div class="section-head"><div class="eyebrow">02 / The sound</div><h2>My music is my portfolio</h2></div>
+<div class="note">
+<p>My music represents my production skills. Listen to the Search For Savior releases to hear the sound, approach, and production quality behind the services offered here.</p>
+<p>I'm part of the Houston underground, and I'm proud to have worked with artists including:</p>
+<ul class="names">
+<li>Hoaxtherapper</li><li>ThaKvlt</li><li>4bdnightmare</li><li>Bakri11</li><li>Freddy Honda</li>
+<li>And many Houston underground artists</li>
+</ul>
+</div>
+</div></section>
+
+<section id="inquiries"><div class="wrap">
+<div class="section-head"><div class="eyebrow">03 / How to book</div><h2>Submission instructions</h2></div>
+<div class="steps">
+<div class="step"><span>Send an email inquiry to <strong>sxdciety@gmail.com</strong>.</span></div>
+<div class="step"><span>Set the subject to <strong>“mix and master”</strong> for mixing and mastering, or <strong>“feature”</strong> for an artist feature.</span></div>
+<div class="step"><span>You'll receive an email to confirm the service and discuss payment.</span></div>
+</div>
+<div class="contact" style="margin-top:30px">
+<div class="eyebrow">Ready to work?</div><h2>Start an inquiry</h2>
+<p>Choose the service you want and send an email with the matching subject line. We'll confirm the details and discuss payment by email.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<a class="btn" href="mailto:sxdciety@gmail.com?subject=mix%20and%20master">Mix &amp; Master Inquiry</a>
+<a class="btn" href="mailto:sxdciety@gmail.com?subject=feature">Feature Inquiry</a>
+</div>
+<a class="email" href="mailto:sxdciety@gmail.com">sxdciety@gmail.com</a>
+</div>
+</div></section>
+</main>
+<footer class="wrap"><span>© <span id="year"></span> GRAVEWIRE PRODUCTIONS</span><a href="index.html">Back to Search For Savior ↗</a></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>

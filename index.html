@@ -50,6 +50,15 @@ h2{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.055em;line-height:1;margin:
 .merch-poster img{display:block;width:100%;height:auto}
 .store-cta{display:flex;justify-content:center;margin-top:26px}
 .store-cta .btn{font-size:.82rem;padding:16px 28px;text-align:center}
+
+.music-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+.music-panel{background:linear-gradient(145deg,#10150d,#090b08);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;align-items:flex-start}
+.music-panel h3{font-size:1.45rem;text-transform:uppercase;margin:12px 0 6px}
+.music-panel p{color:var(--muted);font-size:.88rem;margin:0 0 18px}
+.spotify-player{border:0;border-radius:12px;margin:4px 0 18px;max-width:100%}
+.youtube-placeholder{width:100%;min-height:220px;background:radial-gradient(ellipse at center,rgba(135,220,0,.18),transparent 65%),linear-gradient(135deg,#171b13,#050605);border:1px solid #39451f;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--acid);font-weight:900;letter-spacing:.16em;font-size:.7rem;margin:4px 0 20px}
+.play-mark{width:58px;height:58px;border:1px solid var(--acid);border-radius:50%;display:grid;place-items:center;font-size:1.2rem;padding-left:3px;box-shadow:0 0 22px rgba(165,255,0,.16)}
+@media(max-width:760px){.music-grid{grid-template-columns:1fr}.music-panel{padding:18px}}
 </style></head>
 <body>
 <header class="wrap topbar"><a class="brand" href="#top">SFS / OFFICIAL SITE</a>
@@ -59,9 +68,21 @@ h2{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.055em;line-height:1;margin:
 <img class="logo" src="search-for-savior-logo.webp" alt="Search For Savior neon green slime metal logo">
 <p>Heavy sound. Dark atmosphere. No clean edges. The official home for new music, merch, live dates and contact.</p>
 <div class="actions"><a class="btn" href="#music">Enter the noise</a><a class="btn alt" href="#shows">Live dates</a></div></div>
-<section id="music"><div class="wrap"><div class="section-head"><div><div class="eyebrow">01 / Discography</div><h2>Music & releases</h2></div><p class="section-note">New releases, singles and the sounds behind Search For Savior. Replace these starter cards with your streaming links.</p></div>
-<div class="grid"><article class="tile"><div><div class="tag">Latest release</div><h3>Latest single</h3><p>Add the release title, artwork and streaming link here.</p></div><a class="text-link" href="https://open.spotify.com/" target="_blank" rel="noopener">Listen / stream ↗</a></article>
-<article class="tile"><div><div class="tag">More music</div><h3>Full discography</h3><p>Find the full catalog and follow for future drops.</p></div><a class="text-link" href="https://music.apple.com/" target="_blank" rel="noopener">Explore music ↗</a></article></div></div></section>
+<section id="music"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">01 / Discography</div><h2>Music & releases</h2></div>
+<p class="section-note">Stream Search For Savior on Spotify and watch official videos on YouTube. Follow the channels for new releases.</p></div>
+<div class="music-grid">
+  <div class="music-panel"><div class="tag">Listen on Spotify</div><h3>Search For Savior</h3>
+    <p>Explore the artist profile, releases and full catalog.</p>
+    <iframe class="spotify-player" src="https://open.spotify.com/embed/artist/6fRLKknhGitkjYdzuGjb2U?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Search For Savior on Spotify"></iframe>
+    <a class="text-link" href="https://open.spotify.com/artist/6fRLKknhGitkjYdzuGjb2U" target="_blank" rel="noopener">Open Spotify artist profile ↗</a>
+  </div>
+  <div class="music-panel youtube-panel"><div class="tag">Official YouTube</div><h3>Watch the videos</h3>
+    <p>Music videos, visualizers and official Search For Savior uploads.</p>
+    <div class="youtube-placeholder"><span class="play-mark">▶</span><span>OFFICIAL VIDEO CHANNEL</span></div>
+    <a class="btn" href="https://youtube.com/@searchforsavior_offical" target="_blank" rel="noopener">VISIT YOUTUBE CHANNEL ↗</a>
+  </div>
+</div></div></section>
 <section id="merch"><div class="wrap">
 <div class="section-head"><div><div class="eyebrow">02 / Official goods</div><h2>Merch</h2></div>
 <p class="section-note">Official Search For Savior merchandise. Browse the full collection and shop directly through our Printify store.</p></div>

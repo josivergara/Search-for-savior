@@ -32,6 +32,24 @@ h2{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.055em;line-height:1;margin:
 .booking p{color:var(--muted);max-width:560px}footer{padding:28px 0 42px;color:var(--muted);font-size:.7rem;letter-spacing:.08em;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .small{font-size:.72rem;color:var(--muted)}
 @media(max-width:700px){.topbar{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{min-height:70vh;padding:45px 0}.logo{max-height:48vh}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.section-head{display:block}.section-note{margin-top:12px}}
+
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.product-card{background:linear-gradient(145deg,#10150d,#090b08);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.product-image{display:block;background:#f5f5f5;aspect-ratio:4/5;overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s ease}
+.product-card:hover .product-image img{transform:scale(1.035)}
+.product-info{padding:20px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.product-info h3{font-size:1.1rem;letter-spacing:.02em;margin:10px 0 5px}
+.product-info p{color:var(--muted);font-size:.82rem;margin:0 0 18px}
+.product-info .text-link{margin-top:auto}
+.store-cta{display:flex;justify-content:center;margin-top:28px}
+@media(max-width:800px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.product-grid{grid-template-columns:1fr 1fr;gap:10px}.product-info{padding:13px}.product-info h3{font-size:.9rem}.product-info p{font-size:.75rem}}
+
+.merch-poster{width:min(100%,820px);margin:0 auto;border:1px solid #42551c;background:#070907;box-shadow:0 0 34px rgba(135,220,0,.12);overflow:hidden}
+.merch-poster img{display:block;width:100%;height:auto}
+.store-cta{display:flex;justify-content:center;margin-top:26px}
+.store-cta .btn{font-size:.82rem;padding:16px 28px;text-align:center}
 </style></head>
 <body>
 <header class="wrap topbar"><a class="brand" href="#top">SFS / OFFICIAL SITE</a>
@@ -44,11 +62,16 @@ h2{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.055em;line-height:1;margin:
 <section id="music"><div class="wrap"><div class="section-head"><div><div class="eyebrow">01 / Discography</div><h2>Music & releases</h2></div><p class="section-note">New releases, singles and the sounds behind Search For Savior. Replace these starter cards with your streaming links.</p></div>
 <div class="grid"><article class="tile"><div><div class="tag">Latest release</div><h3>Latest single</h3><p>Add the release title, artwork and streaming link here.</p></div><a class="text-link" href="https://open.spotify.com/" target="_blank" rel="noopener">Listen / stream ↗</a></article>
 <article class="tile"><div><div class="tag">More music</div><h3>Full discography</h3><p>Find the full catalog and follow for future drops.</p></div><a class="text-link" href="https://music.apple.com/" target="_blank" rel="noopener">Explore music ↗</a></article></div></div></section>
-<section id="merch"><div class="wrap"><div class="section-head"><div><div class="eyebrow">02 / Official goods</div><h2>Merch</h2></div><p class="section-note">Official Search For Savior apparel and limited-run pieces. Browse the collection in our external store.</p></div>
-<div class="grid"><article class="tile"><div><div class="tag">Official store</div><h3>Wear the noise</h3><p>Explore Search For Savior shirts, hoodies and more in the official merch shop.</p></div><a class="text-link" href="https://sfsmerch.printify.me/" target="_blank" rel="noopener">Shop Search For Savior ↗</a></article>
-<article class="tile"><div><div class="tag">New drops</div><h3>Merch collection</h3><p>Find available designs, sizes and product details directly in our store.</p></div><a class="text-link" href="https://sfsmerch.printify.me/" target="_blank" rel="noopener">View full store ↗</a></article>
-<div class="wide" style="display:flex;justify-content:center;align-items:center;padding:12px 0"><a class="btn" href="https://sfsmerch.printify.me/" target="_blank" rel="noopener">ENTER THE OFFICIAL MERCH STORE ↗</a></div>
-</div></div></section>
+<section id="merch"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">02 / Official goods</div><h2>Merch</h2></div>
+<p class="section-note">Official Search For Savior merchandise. Browse the full collection and shop directly through our Printify store.</p></div>
+<div class="merch-poster">
+  <img src="sfs-official-merch-flyer.webp" alt="Search For Savior official merchandise collection flyer">
+</div>
+<div class="store-cta">
+  <a class="btn" href="https://sfsmerch.printify.me/" target="_blank" rel="noopener">SHOP THE OFFICIAL COLLECTION ↗</a>
+</div>
+</div></section>
 <section id="shows"><div class="wrap"><div class="section-head"><div><div class="eyebrow">03 / On stage</div><h2>Upcoming shows</h2></div><p class="section-note">Catch Search For Savior live. Dates will appear here as shows are announced.</p></div>
 <div class="tile wide"><div><div class="tag">Next announcement</div><h3>Show details coming soon</h3><p>Venue · City · Date · Tickets — replace this card when the next show is confirmed.</p></div><span class="small">Check back for announcements.</span></div></div></section>
 <section id="booking"><div class="wrap"><div class="booking"><div class="eyebrow">04 / Get in touch</div><h2>Booking & contact</h2>
